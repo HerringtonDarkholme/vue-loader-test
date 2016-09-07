@@ -1,0 +1,33 @@
+{
+  "name": "vue-loader-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "av-ts": "0.0.5",
+    "vue": "^1.0.26"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.38",
+    "@types/vue": "^1.0.29",
+    "typescript": "^2.0.2",
+    "vue": "^2.0.0-rc.3",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^8.5.3",
+    "vue-template-compiler": "^2.0.0-rc.4",
+    "vue-ts-loader": "0.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcstory/vue-loader-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tcstory/vue-loader-test/issues"
+  },
+  "homepage": "https://github.com/tcstory/vue-loader-test#readme"
+}

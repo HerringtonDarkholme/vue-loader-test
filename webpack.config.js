@@ -1,24 +1,33 @@
-/**
- * Created by tcstory on 12/22/15.
- */
+var webpack = require('webpack')
 
 module.exports = {
-    entry: './src/js/app.js',
+    entry: {
+      app: './src/app.ts',
+      vendor: ['vue', 'av-ts']
+    },
     output: {
         path: 'dist/',
-        filename: 'js/bundle.js'
+        filename: 'bundle.js'
     },
     module: {
         loaders: [
             {
-                test: /\.tsx?$/,
-                loader: 'ts-loader'
-            },
-            {
                 test: /\.vue$/,
                 loader: 'vue'
+            },
+            {
+                test: /\.ts$/,
+                loader: 'vue-ts'
             }
-        ]
-    }
+        ],
+    },
+    vue: {
+      loaders: {
+        js: 'vue-ts-loader',
+      }
+    },
+    plugins: [
+      new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+    ]
 }
 
