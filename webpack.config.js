@@ -19,6 +19,10 @@ module.exports = {
                 loader: 'vue'
             }
         ]
-    }
+    },
+	  babel: {
+		presets: ['es2015'],
+		plugins: ['transform-runtime']
+	  }
 }
 

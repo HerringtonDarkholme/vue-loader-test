@@ -1,10 +1,7 @@
-<template><p>纳尼?你再说一次.</p></template>
+<template>
+	<p>纳尼?你再说一次.{{msg}}</p></template>
 
-<script lang="ts">
-    export = {
-        methods: {
-            sayHello: function () {
-                alert('hello')
-            }
-    }
+<script>
+import Vue from 'vue'
+export default Vue.extend({})
 </script>
