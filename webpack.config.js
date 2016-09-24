@@ -24,7 +24,8 @@ module.exports = {
     vue: {
       loaders: {
         js: 'vue-ts-loader',
-      }
+      },
+      esModule: true
     },
     plugins: [
       new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
