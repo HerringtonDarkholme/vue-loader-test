@@ -4,7 +4,9 @@
         "target": "es5",
         "noImplicitAny": false,
         "experimentalDecorators": true,
-        "sourceMap": false
+        "sourceMap": false,
+        "typeRoots": ["node_modules/@types"],
+        "lib": ["es5", "dom", "es2015.promise"]
     },
     "exclude": [
         "node_modules"

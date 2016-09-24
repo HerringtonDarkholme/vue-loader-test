@@ -4,8 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "dependencies": {
-    "av-ts": "0.0.10",
-    "kilimanjaro": "0.0.4",
+    "av-ts": "0.0.11",
+    "kilimanjaro": "0.0.5",
     "vue": "^2.0.0-rc.7"
   },
   "devDependencies": {

@@ -2,15 +2,13 @@
 <p>纳尼!我就再说咋的!</p></template>
 
 <script>
-  import {Component} from 'av-ts'
-  import Vue =require('vue')
+import { Component, Vue } from 'av-ts'
 
-  @Component
-  class Haha extends Vue {
-    sayHello() {
-      alert(23333)
-      alert('hello')
-    }
+@Component
+export default class Haha extends Vue {
+  sayHello() {
+    alert(23333)
+    alert('hello')
   }
-  export default Haha
+}
 </script>

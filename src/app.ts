@@ -1,5 +1,5 @@
 import Vue = require('vue')
-import {create} from 'av-ts/dist/src/vuex'
+import {create} from 'kilimanjaro'
 
 var nani = require('./components/nani.vue')
 new Vue({
@@ -8,10 +8,3 @@ new Vue({
       return h(nani)
     }
 })
-
-
-var module = create()
-  .state({})
-  .getters({})
-  .mutations({})
-  .actions({})

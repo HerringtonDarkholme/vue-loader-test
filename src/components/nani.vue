@@ -4,18 +4,16 @@
 </p></template>
 
 <script>
-import {Component} from 'av-ts'
-import Vue =require('vue')
+import { Component, Vue } from 'av-ts'
 import haha from './haha.vue'
 
 @Component({
   components: { haha }
 })
-class Nani extends Vue {
+export default class Nani extends Vue {
   sayHello() {
       alert(23333)
       alert('hello')
   }
 }
-export default Nani
 </script>
