@@ -7,6 +7,12 @@ Vue.component('v-template', {
     this.$options.render = h => h('')
   }
 })
+Vue.component('v-outlet', {
+  render(h) {
+    let template = this.$parent.$slots['default'][0].data.inlineTemplate
+    return template.render()
+  }
+})
 
 new Vue({
     el: '#vue-container',

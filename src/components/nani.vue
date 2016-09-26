@@ -1,9 +1,8 @@
 <template>
 <p>
-  纳尼?你再说一次.
-  <haha :prop="123">
+  <haha>
     <component is="v-template" inline-template>
-      <span>, hehe, 1231232</span>
+      <span>闷声发大财</span>
     </component>
   </haha>
 </p>
