@@ -1,9 +1,9 @@
 <template>
 <p>
   <haha>
-    <component is="v-template" inline-template>
-      <span>闷声发大财</span>
-    </component>
+    <v-template inline-template>
+      <span>{{$ctx.name}}说: 闷声发大财 +{{$ctx.i}}s<br/></span>
+    </v-template>
   </haha>
 </p>
 </template>

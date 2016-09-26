@@ -8,9 +8,27 @@ Vue.component('v-template', {
   }
 })
 Vue.component('v-outlet', {
-  render(h) {
-    let template = this.$parent.$slots['default'][0].data.inlineTemplate
-    return template.render()
+  props: {
+    source: {
+      type: String,
+      default: 'default',
+    },
+    $ctx: {}
+  },
+  created() {
+    let slots = this && this.$parent && this.$parent.$slots
+    let vnodes = slots && slots[this['source']]
+    let vnode = vnodes && vnodes[0]
+    let template = vnode && vnode.data && vnode.data.inlineTemplate
+    if (!template) {
+      this.$options.render = function(h) {
+        let fallbacks = this.$slots['default']
+        return (fallbacks && fallbacks[0]) || h('')
+      }
+      return
+    }
+    this.$options.render = template.render as any
+    this.$options.staticRenderFns = template.staticRenderFns as any
   }
 })
 
