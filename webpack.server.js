@@ -1,16 +1,21 @@
 var webpack = require('webpack')
 
+var packageJSON = require('./package.json')
+var externals = Object.keys(packageJSON.dependencies).concat(Object.keys(packageJSON.devDependencies))
+
 module.exports = {
     entry: {
-      app: './src/app.ts',
-      vendor: ['vue', 'av-ts', 'kilimanjaro']
+      app: './index.ts',
     },
+    target: 'node',
     output: {
         path: 'dist/',
-        filename: 'bundle.js'
+        filename: 'server.js',
+        libraryTarget: 'commonjs2'
     },
+    externals: externals,
     resolve: {
-        extensions: ['', '.ts', '.vue', '.js']
+        extensions: ['', '.ts', '.vue']
     },
     module: {
         loaders: [
@@ -30,8 +35,5 @@ module.exports = {
       },
       esModule: true
     },
-    plugins: [
-      new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
-    ]
 }
 

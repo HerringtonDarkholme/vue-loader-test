@@ -2,9 +2,10 @@
 <p>
   <button @click="repeat++">+1s</button>
   {{repeat}}<br/>
-  <v-outlet source="ss" :$ctx="{name: '江', i: repeat}" v-for="i in repeat">
+  <v-outlet :$ctx="{name: '江', i: repeat}" v-for="i in repeat">
     <span>{{i}}颗赛艇! 总共{{repeat}}颗赛艇<br/></span>
   </v-outlet>
+  <v-outlet source="shat" :$ctx="repeat"></v-outlet>
 </p>
 </template>
 <script>

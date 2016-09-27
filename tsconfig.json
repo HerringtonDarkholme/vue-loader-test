@@ -6,6 +6,7 @@
         "experimentalDecorators": true,
         "sourceMap": false,
         "typeRoots": ["node_modules/@types"],
+        "outDir": "dist",
         "lib": ["es5", "dom", "es2015.promise"]
     },
     "exclude": [

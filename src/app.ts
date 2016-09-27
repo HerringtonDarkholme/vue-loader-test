@@ -31,14 +31,23 @@ Vue.component('v-outlet', {
     this.$options.staticRenderFns = template.staticRenderFns as any
   }
 })
+declare module 'vue/types/options' {
+  interface ComponentOptions<V extends Vue> {
+    what?: number
+  }
+}
 
-new Vue({
-    el: '#vue-container',
+var App = new Vue({
     components: {nani},
+    what: 123,
     render(h) {
       return h('nani')
     }
 })
+export default App
+if (typeof document !== 'undefined') {
+  App.$mount('#vue-container')
+}
 
 var store = create({test: 123})
 .getter('get', s => s.test + 11)
@@ -48,4 +57,4 @@ var store = create({test: 123})
 })
 .done()
 
-window['store'] = store
+global['store'] = store
